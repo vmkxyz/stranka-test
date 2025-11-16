@@ -1,4 +1,4 @@
-fetch("{{ site.baseurl }}/portraits.json")
+fetch("../portraits.json")
 	.then(r => r.json())
 	.then(data => {
 		const container = document.getElementById("portraits");
@@ -9,8 +9,8 @@ fetch("{{ site.baseurl }}/portraits.json")
 			const name = p.name;
 			const years = p.years;
 
-			const imgPath = `{{ site.baseurl }}/assets/portraits/${name}.jpg`;
-			const sheetPath = `{{ site.baseurl }}/sheet/${name}/index.html`;
+			const imgPath = `portraits/${name}.jpg`;
+			const sheetPath = `../sheet/${name}/index.html`;
 
 			const card = document.createElement("a");
 			card.href = sheetPath;
