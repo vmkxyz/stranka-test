@@ -1,123 +1,141 @@
 body {
-	font-family: Arial, sans-serif;
-	background-color: #e3e7ea;
-	margin: 0;
-	padding: 0 20px;
-	text-align: center;
-	color: #2c2c2c;
+    font-family: Arial, sans-serif;
+    background-color: #e3e7ea;
+    margin: 0;
+    padding: 0 20px;
+    text-align: center;
+    color: #2c2c2c;
 }
-
 h1 {
-	margin-top: 40px;
-	font-size: 3em;
-	border-bottom: 4px solid #444;
-	display: inline-block;
-	padding-bottom: 10px;
+    margin-top: 40px;
+    font-size: 3em;
+    border-bottom: 4px solid #444;
+    display: inline-block;
+    padding-bottom: 10px;
 }
-
 .info-box {
-	background-color: #f0f1f3;
-	border-radius: 12px;
-	padding: 20px;
-	margin: 40px auto;
-	max-width: 800px;
-	box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-	text-align: left;
+    background-color: #f0f1f3;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    text-align: left;
 }
-
 .info-box h2 {
-	margin-top: 0;
-	font-size: 1.5em;
-	color: #303030;
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #303030;
 }
-
 .info-box p {
-	margin: 5px 0;
-	color: #3a3a3a;
+    margin: 5px 0;
+    color: #3a3a3a;
 }
-
 .portraits-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 40px;
-	margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
 }
-
 .portrait-card {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	flex: 0 0 45%;
-	max-width: 300px;
-	text-decoration: none;
-	transition: none;
-	padding: 10px;
-	border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 45%;
+    max-width: 300px;
+    text-decoration: none;
+    transition: none;
+    padding: 10px;
+    border-radius: 14px;
 }
-
 .portrait-card img {
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	object-fit: cover;
-	border: 3px solid #4CAF50;
-	margin-bottom: 10px;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4caf50;
+    margin-bottom: 10px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
-
 .portrait-card img:hover {
-	transform: scale(1.1);
-	box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
-
 .portrait-card .name {
-	font-weight: bold;
-	margin-bottom: 5px;
-	color: #2b2b2b;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2b2b2b;
 }
-
 .portrait-card .years {
-	font-size: 0.9em;
-	color: #555;
+    font-size: 0.9em;
+    color: #555;
 }
 
+/* Tablets and smaller desktops */
 @media (max-width: 800px) {
-	.portrait-card {
-		flex: 0 0 48%;
-		padding: 8px;
-	}
-
-	.portrait-card img {
-		width: 190px;
-		height: 190px;
-	}
-
-	.portraits-container {
-		gap: 24px;
-	}
+    .portrait-card {
+        flex: 0 0 48%;
+        max-width: none;
+        padding: 8px;
+    }
+    .portrait-card img {
+        width: 180px;
+        height: 180px;
+    }
+    .portraits-container {
+        gap: 24px;
+    }
 }
 
-@media (max-width: 500px) {
+/* Phones - 2 per row */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.2em;
+    }
+    .portrait-card {
+        flex: 0 0 calc(50% - 12px);
+        max-width: none;
+        padding: 6px;
+    }
+    .portrait-card img {
+        width: 140px;
+        height: 140px;
+    }
+    .portraits-container {
+        gap: 16px;
+        padding: 0 5px;
+    }
+    body {
+        padding: 0 15px;
+    }
+    .info-box {
+        margin: 30px auto;
+        padding: 15px;
+    }
+}
 
-	/* FORCE 2 PER ROW */
-	.portrait-card {
-		flex: 0 0 50%;
-		max-width: none;	/* overrides the 300px problem */
-		padding: 6px;
-	}
-
-	/* smaller images for strict fit */
-	.portrait-card img {
-		width: 140px;
-		height: 140px;
-	}
-
-	.portraits-container {
-		gap: 12px;
-	}
-
-	body {
-		padding: 0 10px;
-	}
+/* Small phones */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    .portrait-card img {
+        width: 120px;
+        height: 120px;
+    }
+    .portrait-card .name {
+        font-size: 0.95em;
+    }
+    .portrait-card .years {
+        font-size: 0.85em;
+    }
+    .portraits-container {
+        gap: 12px;
+    }
+    body {
+        padding: 0 10px;
+    }
 }
