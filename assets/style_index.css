@@ -1,36 +1,39 @@
 body {
 	font-family: Arial, sans-serif;
-	background-color: #f5f5f5;
+	background-color: #e3e7ea;
 	margin: 0;
 	padding: 0 20px;
 	text-align: center;
+	color: #2c2c2c;
 }
 
 h1 {
 	margin-top: 40px;
 	font-size: 3em;
-	border-bottom: 4px solid #333;
+	border-bottom: 4px solid #444;
 	display: inline-block;
 	padding-bottom: 10px;
 }
 
 .info-box {
-	background-color: #fff;
+	background-color: #f0f1f3;
 	border-radius: 12px;
 	padding: 20px;
 	margin: 40px auto;
 	max-width: 800px;
-	box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+	box-shadow: 0 3px 10px rgba(0,0,0,0.12);
 	text-align: left;
 }
 
 .info-box h2 {
 	margin-top: 0;
 	font-size: 1.5em;
+	color: #303030;
 }
 
 .info-box p {
 	margin: 5px 0;
+	color: #3a3a3a;
 }
 
 .portraits-container {
@@ -48,8 +51,9 @@ h1 {
 	flex: 0 0 45%;
 	max-width: 300px;
 	text-decoration: none;
-	color: #333;
 	transition: none;
+	padding: 10px;
+	border-radius: 14px;
 }
 
 .portrait-card img {
@@ -64,35 +68,52 @@ h1 {
 
 .portrait-card img:hover {
 	transform: scale(1.1);
-	box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+	box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 .portrait-card .name {
 	font-weight: bold;
 	margin-bottom: 5px;
+	color: #2b2b2b;
 }
 
 .portrait-card .years {
 	font-size: 0.9em;
-	color: #666;
+	color: #555;
 }
 
 @media (max-width: 800px) {
 	.portrait-card {
-		flex: 0 0 45%; /* 2 per row on smaller screens too */
+		flex: 0 0 48%;	/* 2 per row */
+		padding: 8px;
 	}
+
 	.portrait-card img {
-		width: 180px;
-		height: 180px;
+		width: 190px;
+		height: 190px;
+	}
+
+	.portraits-container {
+		gap: 24px;
 	}
 }
 
 @media (max-width: 500px) {
 	.portrait-card {
-		flex: 0 0 80%; /* 1 per row on very small screens */
+		flex: 0 0 48%;	/* forced 2 per row even on small phones */
+		padding: 6px;
 	}
+
 	.portrait-card img {
-		width: 150px;
+		width: 150px;	/* large but fits 2 per row */
 		height: 150px;
+	}
+
+	.portraits-container {
+		gap: 18px;	/* tighter so it fits visually */
+	}
+
+	body {
+		padding: 0 10px;
 	}
 }
