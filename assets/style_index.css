@@ -49,7 +49,7 @@ h1 {
 	flex-direction: column;
 	align-items: center;
 	flex: 0 0 45%;
-	/* removed max-width: 300px; (this caused the mobile break) */
+	max-width: 300px;
 	text-decoration: none;
 	transition: none;
 	padding: 10px;
@@ -82,7 +82,6 @@ h1 {
 	color: #555;
 }
 
-/* Tablet / mid screens */
 @media (max-width: 800px) {
 	.portrait-card {
 		flex: 0 0 48%;
@@ -90,8 +89,8 @@ h1 {
 	}
 
 	.portrait-card img {
-		width: 180px;
-		height: 180px;
+		width: 190px;
+		height: 190px;
 	}
 
 	.portraits-container {
@@ -99,21 +98,23 @@ h1 {
 	}
 }
 
-/* Mobile phones */
 @media (max-width: 500px) {
+
+	/* FORCE 2 PER ROW */
 	.portrait-card {
-		flex: 0 0 50%; /* Guaranteed 2 per row */
-		max-width: 200px; /* This fixes the overflow problem */
+		flex: 0 0 50%;
+		max-width: none;	/* overrides the 300px problem */
 		padding: 6px;
 	}
 
+	/* smaller images for strict fit */
 	.portrait-card img {
-		width: 150px;
-		height: 150px;
+		width: 140px;
+		height: 140px;
 	}
 
 	.portraits-container {
-		gap: 16px;
+		gap: 12px;
 	}
 
 	body {
