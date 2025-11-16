@@ -73,67 +73,30 @@ h1 {
     font-size: 0.9em;
     color: #555;
 }
-
-/* Tablets and smaller desktops */
 @media (max-width: 800px) {
     .portrait-card {
-        flex: 0 0 48%;
-        max-width: none;
+        flex: 0 0 48%; /* 2 per row */
         padding: 8px;
     }
     .portrait-card img {
-        width: 180px;
-        height: 180px;
+        width: 190px;
+        height: 190px;
     }
     .portraits-container {
         gap: 24px;
     }
 }
-
-/* Phones - 2 per row */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 2.2em;
-    }
+@media (max-width: 500px) {
     .portrait-card {
-        flex: 0 0 calc(50% - 12px);
-        max-width: none;
+        flex: 0 0 48%;
         padding: 6px;
     }
     .portrait-card img {
-        width: 140px;
-        height: 140px;
+        width: 150px;
+        height: 150px;
     }
     .portraits-container {
-        gap: 16px;
-        padding: 0 5px;
-    }
-    body {
-        padding: 0 15px;
-    }
-    .info-box {
-        margin: 30px auto;
-        padding: 15px;
-    }
-}
-
-/* Small phones */
-@media (max-width: 400px) {
-    h1 {
-        font-size: 1.8em;
-    }
-    .portrait-card img {
-        width: 120px;
-        height: 120px;
-    }
-    .portrait-card .name {
-        font-size: 0.95em;
-    }
-    .portrait-card .years {
-        font-size: 0.85em;
-    }
-    .portraits-container {
-        gap: 12px;
+        gap: 18px;
     }
     body {
         padding: 0 10px;
